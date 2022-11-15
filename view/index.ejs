@@ -1,0 +1,104 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <title>FT-Trip</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="text-center text-primary mt-3 mb-3"></h1>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-md-10">augtrip</div>
+                        <div class="col-md-2">
+                            <a href="/export" class="btn btn-success btn-sm float-end">Export to CSV</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                        
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>TripId</th>
+                            <th>BillTo</th>
+                            <th>ChargedTo</th>
+                            <th>TripCreationTime</th>
+                            <th>ConsignorName</th>
+                            <th>ConsignorId</th>
+                            <th>ConsignorBranchName</th>
+                            <th>ConsignorBranchId</th>
+                            <th>TransporterName</th>
+                            <th>TransporterId</th>
+                            <th>TransporterBranchName</th>
+                            <th>TransporterBranchId</th>
+                            <th>CreatedByCompanyId</th>
+                            <th>CreatedByCompanyName</th>
+                            <th>FeedUniqueId</th>
+                            <th>Origin</th>
+                            <th>Destination</th>
+                            <th>DestinationCity</th>
+                            <th>DriverNumbers</th>
+                            <th>SimCarrier</th>
+                            <th>ATA</th>
+                            <th>TripClosureTime</th>
+                            <th>LocationSource</th>
+                            <th>TrackedLocationSources</th>
+                            <th>LRNumber</th>
+                            <th>InvoiceNumber</th>
+                            <th>VehicleNumber</th>
+                            <th>NoofDays</th>
+                            <th>Rate</th>
+                            <th>TotalCost</th>
+                            
+                            
+                        </tr>
+                        <%augtrip.forEach(function(data){ %>
+                        <tr>
+                            <td><%= data.TripId %></td>
+                            <td><%= data.BillTo %></td>
+                            <td><%= data.ChargedTo %></td>
+                            <td><%= data.TripCreationTime %></td>
+                            <td><%= data.ConsignorName %></td>
+                            <td><%= data.ConsignorId %></td>
+                            <td><%= data.ConsignorBranchName %></td>
+                            <td><%= data.ConsignorBranchId %></td>
+                            <td><%= data.TransporterName %></td>
+                            <td><%= data.TransporterId %></td>
+                            <td><%= data.TransporterBranchName %></td>
+                            <td><%= data.TransporterBranchId %></td>
+                            <td><%= data.CreatedByCompanyId %></td>
+                            <td><%= data.CreatedByCompanyName %></td>
+                            <td><%= data.FeedUniqueId %></td>
+                            <td><%= data.Origin %></td>
+                            <td><%= data.Destination %></td>
+                            <td><%= data.DestinationCity %></td>
+                            <td><%= data.DriverNumbers %></td>
+                            <td><%= data.SimCarrier %></td>
+                            <td><%= data.ATA %></td>
+                            <td><%= data.TripClosureTime %></td>
+                            <td><%= data.LocationSource %></td>
+                            <td><%= data.TrackedLocationSources %></td>
+                            <td><%= data.LRNumber %></td>
+                            <td><%= data.InvoiceNumber %></td>
+                            <td><%= data.VehicleNumber %></td>
+                            <td><%= data.NoofDays %></td>
+                            <td><%= data.Rate %></td>
+                            <td><%= data.TotalCost %></td>
+                        </tr>
+                        <% }); %>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+  </body>
+</html>
